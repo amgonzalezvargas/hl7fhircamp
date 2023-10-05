@@ -1,0 +1,102 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-pacientes-12345",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:10001",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "10001",
+        "name": [
+          {
+            "family": "Garcia",
+            "given": ["Juan", "Carlos"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1990-01-01"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:10002",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "10002",
+        "name": [
+          {
+            "family": "Rodriguez",
+            "given": ["Maria", "Isabel"]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1992-02-15"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:10003",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "10003",
+        "name": [
+          {
+            "family": "Perez",
+            "given": ["Pedro"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1985-05-20"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:10004",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "10004",
+        "name": [
+          {
+            "family": "Sanchez",
+            "given": ["Carmen", "Lucia"]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1995-09-10"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:10005",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "10005",
+        "name": [
+          {
+            "family": "Lopez",
+            "given": ["Alejandro"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2000-12-12"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    }
+  ]
+}
