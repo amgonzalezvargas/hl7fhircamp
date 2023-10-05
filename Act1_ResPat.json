@@ -1,91 +1,102 @@
 {
   "resourceType": "Patient",
-  "id": "12345678",
+  "id": "bf6421e3-5438-423d-a889-a045af091b96",
   "identifier": [
-    {
-      "use": "official",
-      "system": "urn:oid:1.1.1.1.1.1",
-      "value": "LM10ARG"
-    },
-    {
-      "use": "usual",
-      "system": "urn:oid:2.2.2.2.2.2",
-      "value": "12345LM"
-    }
+      {
+          "use": "official",
+          "type": {
+              "coding": [
+                  {
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                      "code": "NNCOL",
+                      "display": "CEDULA DE CIUDADANIA"
+                  }
+              ],
+              "text": "Medical Record Number"
+          },
+          "value": "LM10ARG"
+      }
   ],
   "active": true,
   "telecom": [
-    {
-      "system": "phone",
-      "value": "+1234567890",
-      "use": "mobile"
-    },
-    {
-      "system": "phone",
-      "value": "+0987654321",
-      "use": "home"
-    },
-    {
-      "system": "email",
-      "value": "lionel.messi@email.com"
-    }
+      {
+          "system": "phone",
+          "value": "+1234567890",
+          "use": "mobile"
+      },
+      {
+          "system": "phone",
+          "value": "+0987654321",
+          "use": "home"
+      },
+      {
+          "system": "email",
+          "value": "lionel.messi@email.com"
+      }
   ],
   "name": [
-    {
-      "family": "Messi",
-      "given": ["Lionel", "Andrés"],
-      "use": "official"
-    }
+      {
+          "family": "Messi Cuccittini",
+          "given": [
+              "Lionel",
+              "Andrés"
+          ],
+          "use": "official"
+      }
   ],
   "gender": "male",
   "birthDate": "1987-06-24",
   "address": [
-    {
-      "line": ["1234 Rosario Street"],
-      "city": "Rosario",
-      "state": "Santa Fe",
-      "postalCode": "2000",
-      "country": "Argentina"
-    }
+      {
+          "line": [
+              "1234 Rosario Street"
+          ],
+          "city": "Rosario",
+          "state": "Santa Fe",
+          "postalCode": "2000",
+          "country": "Argentina"
+      }
   ],
   "maritalStatus": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/v3/MaritalStatus",
-        "code": "M",
-        "display": "Married"
-      }
-    ],
-    "text": "Married"
+      "coding": [
+          {
+              "system": "http://hl7.org/fhir/v3/MaritalStatus",
+              "code": "M",
+              "display": "Married"
+          }
+      ],
+      "text": "Married"
   },
   "contact": [
-    {
-      "relationship": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/patient-contact-relationship",
-              "code": "family"
-            }
+      {
+          "relationship": [
+              {
+                  "coding": [
+                      {
+                          "system": "http://hl7.org/fhir/patient-contact-relationship",
+                          "code": "family"
+                      }
+                  ],
+                  "text": "Family"
+              }
           ],
-          "text": "Family"
-        }
-      ],
-      "name": {
-        "family": "Roccuzzo",
-        "given": ["Antonella"]
-      },
-      "telecom": [
-        {
-          "system": "phone",
-          "value": "+1122334455",
-          "use": "mobile"
-        },
-        {
-          "system": "email",
-          "value": "antonella.roccuzzo@email.com"
-        }
-      ]
-    }
+          "name": {
+              "family": "Roccuzzo",
+              "given": [
+                  "Antonella"
+              ]
+          },
+          "telecom": [
+              {
+                  "system": "phone",
+                  "value": "+1122334455",
+                  "use": "mobile"
+              },
+              {
+                  "system": "email",
+                  "value": "antonella.roccuzzo@email.com"
+              }
+          ]
+      }
   ]
 }
