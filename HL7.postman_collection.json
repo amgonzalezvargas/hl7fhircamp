@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "61b50301-8219-4346-9218-11c244adf08c",
+		"name": "HL7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12859771"
+	},
+	"item": [
+		{
+			"name": "crearPaciente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resourceType\": \"Patient\",\n    \"id\": \"bf6421e3-5438-423d-a889-a045af091b96\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hapi.fhir.org/baseR4/Patient",
+					"protocol": "https",
+					"host": [
+						"hapi",
+						"fhir",
+						"org"
+					],
+					"path": [
+						"baseR4",
+						"Patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarPaciente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resourceType\": \"Patient\",\n    \"id\":\"bf6421e3-5438-423d-a889-a045af091b96\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hapi.fhir.org/baseR4/Patient/bf6421e3-5438-423d-a889-a045af091b96",
+					"protocol": "https",
+					"host": [
+						"hapi",
+						"fhir",
+						"org"
+					],
+					"path": [
+						"baseR4",
+						"Patient",
+						"bf6421e3-5438-423d-a889-a045af091b96"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerPacientePorNombres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://hapi.fhir.org/baseR4/Patient?family=messi",
+					"protocol": "https",
+					"host": [
+						"hapi",
+						"fhir",
+						"org"
+					],
+					"path": [
+						"baseR4",
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "family",
+							"value": "messi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerPacientePorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resourceType\": \"Patient\",\n    \"id\": \"bf6421e3-5438-423d-a889-a045af091b96\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hapi.fhir.org/baseR4/Patient/bf6421e3-5438-423d-a889-a045af091b96",
+					"protocol": "https",
+					"host": [
+						"hapi",
+						"fhir",
+						"org"
+					],
+					"path": [
+						"baseR4",
+						"Patient",
+						"bf6421e3-5438-423d-a889-a045af091b96"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "capabilityStatement",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resourceType\": \"Patient\",\n    \"id\": \"bf6421e3-5438-423d-a889-a045af091b96\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hapi.fhir.org/baseR4/metadata",
+					"protocol": "https",
+					"host": [
+						"hapi",
+						"fhir",
+						"org"
+					],
+					"path": [
+						"baseR4",
+						"metadata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrarPaciente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resourceType\": \"Patient\",\n    \"id\":\"bf6421e3-5438-423d-a889-a045af091b96\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hapi.fhir.org/baseR4/Patient/bf6421e3-5438-423d-a889-a045af091b96",
+					"protocol": "https",
+					"host": [
+						"hapi",
+						"fhir",
+						"org"
+					],
+					"path": [
+						"baseR4",
+						"Patient",
+						"bf6421e3-5438-423d-a889-a045af091b96"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
