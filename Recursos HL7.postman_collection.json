@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "61b50301-8219-4346-9218-11c244adf08c",
+		"name": "Recursos HL7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12859771"
+	},
+	"item": [
+		{
+			"name": "PATIENT",
+			"item": [
+				{
+					"name": "crearPaciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n    \"resourceType\": \"Patient\",\n    \"id\": \"bf6421e3-5438-423d-a889-a045af091b96\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\"\n                    },\n                    {\n                        \"system\": \"http://terminology.hl7co.org/CodeSystem/ColombianPersonIdentifiers\",\n                        \"code\": \"CC\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n},\n{\n    \"resourceType\": \"Patient\",\n    \"id\": \"bf6421e3-5438-423d-a889-a045af091b99\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Patient",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearPacienteBundle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"bundle-pacientes-12345\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"urn:uuid:10001\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"10001\",\n        \"name\": [\n          {\n            \"family\": \"Garcia\",\n            \"given\": [\"Juan\", \"Carlos\"]\n          }\n        ],\n        \"gender\": \"male\",\n        \"birthDate\": \"1990-01-01\"\n      },\n      \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"Patient\"\n      }\n    },\n    {\n      \"fullUrl\": \"urn:uuid:10002\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"10002\",\n        \"name\": [\n          {\n            \"family\": \"Rodriguez\",\n            \"given\": [\"Maria\", \"Isabel\"]\n          }\n        ],\n        \"gender\": \"female\",\n        \"birthDate\": \"1992-02-15\"\n      },\n      \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"Patient\"\n      }\n    },\n    {\n      \"fullUrl\": \"urn:uuid:10003\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"10003\",\n        \"name\": [\n          {\n            \"family\": \"Perez\",\n            \"given\": [\"Pedro\"]\n          }\n        ],\n        \"gender\": \"male\",\n        \"birthDate\": \"1985-05-20\"\n      },\n      \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"Patient\"\n      }\n    },\n    {\n      \"fullUrl\": \"urn:uuid:10004\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"10004\",\n        \"name\": [\n          {\n            \"family\": \"Sanchez\",\n            \"given\": [\"Carmen\", \"Lucia\"]\n          }\n        ],\n        \"gender\": \"female\",\n        \"birthDate\": \"1995-09-10\"\n      },\n      \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"Patient\"\n      }\n    },\n    {\n      \"fullUrl\": \"urn:uuid:10005\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"10005\",\n        \"name\": [\n          {\n            \"family\": \"Lopez\",\n            \"given\": [\"Alejandro\"]\n          }\n        ],\n        \"gender\": \"male\",\n        \"birthDate\": \"2000-12-12\"\n      },\n      \"request\": {\n        \"method\": \"POST\",\n        \"url\": \"Patient\"\n      }\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarPaciente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"id\":\"bf6421e3-5438-423d-a889-a045af091b96\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Patient/bf6421e3-5438-423d-a889-a045af091b96",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Patient",
+								"bf6421e3-5438-423d-a889-a045af091b96"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerPacientePorNombres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Patient?family=messi",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "family",
+									"value": "messi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerPacientePorId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"id\": \"bf6421e3-5438-423d-a889-a045af091b96\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Patient/23136976",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Patient",
+								"23136976"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "capabilityStatement",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"id\": \"bf6421e3-5438-423d-a889-a045af091b96\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/metadata",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"metadata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarPaciente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"id\":\"bf6421e3-5438-423d-a889-a045af091b96\",\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n                        \"code\": \"NNCOL\",\n                        \"display\": \"CEDULA DE CIUDADANIA\"\n                    }\n                ],\n                \"text\": \"Medical Record Number\"\n            },\n            \"value\": \"LM10ARG\"\n        }\n    ],\n    \"active\": true,\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"+1234567890\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"+0987654321\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"lionel.messi@email.com\"\n        }\n    ],\n    \"name\": [\n        {\n            \"family\": \"Messi Cuccittini\",\n            \"given\": [\n                \"Lionel\",\n                \"Andrés\"\n            ],\n            \"use\": \"official\"\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1987-06-24\",\n    \"address\": [\n        {\n            \"line\": [\n                \"1234 Rosario Street\"\n            ],\n            \"city\": \"Rosario\",\n            \"state\": \"Santa Fe\",\n            \"postalCode\": \"2000\",\n            \"country\": \"Argentina\"\n        }\n    ],\n    \"maritalStatus\": {\n        \"coding\": [\n            {\n                \"system\": \"http://hl7.org/fhir/v3/MaritalStatus\",\n                \"code\": \"M\",\n                \"display\": \"Married\"\n            }\n        ],\n        \"text\": \"Married\"\n    },\n    \"contact\": [\n        {\n            \"relationship\": [\n                {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://hl7.org/fhir/patient-contact-relationship\",\n                            \"code\": \"family\"\n                        }\n                    ],\n                    \"text\": \"Family\"\n                }\n            ],\n            \"name\": {\n                \"family\": \"Roccuzzo\",\n                \"given\": [\n                    \"Antonella\"\n                ]\n            },\n            \"telecom\": [\n                {\n                    \"system\": \"phone\",\n                    \"value\": \"+1122334455\",\n                    \"use\": \"mobile\"\n                },\n                {\n                    \"system\": \"email\",\n                    \"value\": \"antonella.roccuzzo@email.com\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Patient/bf6421e3-5438-423d-a889-a045af091b96",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Patient",
+								"bf6421e3-5438-423d-a889-a045af091b96"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CONDITION",
+			"item": [
+				{
+					"name": "crearCondicion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Condition\",\n  \"clinicalStatus\": {\n    \"coding\": [\n      {\n        \"system\": \"http://terminology.hl7.org/CodeSystem/condition-clinical\",\n        \"code\": \"resolved\",\n        \"display\": \"Resolved\"\n      }\n    ]\n  },\n  \"verificationStatus\": {\n    \"coding\": [\n      {\n        \"system\": \"http://terminology.hl7.org/CodeSystem/condition-ver-status\",\n        \"code\": \"confirmed\",\n        \"display\": \"Confirmed\"\n      }\n    ]\n  },\n  \"category\": [\n    {\n      \"coding\": [\n        {\n          \"system\": \"http://terminology.hl7.org/CodeSystem/condition-category\",\n          \"code\": \"diagnosis\",\n          \"display\": \"Diagnosis\"\n        }\n      ]\n    }\n  ],\n  \"severity\": {\n    \"coding\": [\n      {\n        \"system\": \"http://terminology.hl7.org/CodeSystem/condition-severity\",\n        \"code\": \"moderate\",\n        \"display\": \"Moderate\"\n      }\n    ]\n  },\n  \"code\": {\n    \"coding\": [\n      {\n        \"system\": \"https://vulcano.ihcecol.gov.co/guia/ValueSet-CIE10VS.html\",\n        \"code\": \"A05.9\",\n        \"display\": \"INTOXICACION ALIMENTARIA BACTERIANA, NO ESPECIFICADA\"\n      }\n    ]\n  },\n  \"subject\": {\n    \"reference\": \"Patient/23138809\",\n    \"display\": \"Gustavo Iván Duque Urrego\"\n  },\n  \"onsetDateTime\": \"2022-03-17\",\n  \"abatementDateTime\": \"2022-03-25\",\n  \"recordedDate\": \"2022-03-20\",\n  \"asserter\": {\n    \"reference\": \"Practitioner/23110359\",\n    \"display\": \"Dr. Diego Alberto Espinoza Silva MD\"\n  },\n  \"evidence\": [\n    {\n      \"detail\": [\n        {\n          \"coding\": [\n            {\n              \"system\": \"http://example-symptoms.com\",\n              \"code\": \"SYM01\",\n              \"display\": \"Náuseas\"\n            }\n          ]\n        },\n        {\n          \"coding\": [\n            {\n              \"system\": \"http://example-symptoms.com\",\n              \"code\": \"SYM02\",\n              \"display\": \"Vómito\"\n            }\n          ]\n        },\n        {\n          \"coding\": [\n            {\n              \"system\": \"http://example-symptoms.com\",\n              \"code\": \"SYM03\",\n              \"display\": \"Dolor estomacal\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Condition",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Condition"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ENCOUNTER",
+			"item": [
+				{
+					"name": "crearEncuentro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Encounter\",\n  \"id\": \"encounter45678\",\n  \"identifier\": [\n    {\n      \"use\": \"official\",\n      \"value\": \"ADM20220320-001\"\n    }\n  ],\n  \"status\": \"finished\",\n  \"statusHistory\": [\n    {\n      \"status\": \"arrived\",\n      \"period\": {\n        \"start\": \"2022-03-20T07:15:00\"\n      }\n    },\n    {\n      \"status\": \"in-progress\",\n      \"period\": {\n        \"start\": \"2022-03-20T07:30:00\"\n      }\n    },\n    {\n      \"status\": \"finished\",\n      \"period\": {\n        \"start\": \"2022-03-20T08:15:00\"\n      }\n    }\n  ],\n  \"class\": {\n    \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ActCode\",\n    \"code\": \"AMB\",\n    \"display\": \"Ambulatorio\"\n  },\n  \"type\": [\n    {\n      \"coding\": [\n        {\n          \"system\": \"http://example.org/service-type\",\n          \"code\": \"349\",\n          \"display\": \"Medicina General\"\n        }\n      ]\n    }\n  ],\n  \"priority\": {\n    \"coding\": [\n      {\n        \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ActPriority\",\n        \"code\": \"R\",\n        \"display\": \"Rutina\"\n      }\n    ]\n  },\n  \"subject\": {\n    \"reference\": \"Patient/patient12345\",\n    \"display\": \"Gustavo Iván Duque Urrego\"\n  },\n  \"participant\": [\n    {\n      \"individual\": {\n        \"reference\": \"Practitioner/practitioner12345\",\n        \"display\": \"Dr. Diego Alberto Espinoza Silva MD\"\n      }\n    }\n  ],\n  \"period\": {\n    \"start\": \"2022-03-20T07:15:00\",\n    \"end\": \"2022-03-20T08:15:00\"\n  },\n  \"diagnosis\": [\n    {\n      \"condition\": {\n        \"reference\": \"Condition/condition001\",\n        \"display\": \"INTOXICACION ALIMENTARIA BACTERIANA, NO ESPECIFICADA\"\n      },\n      \"rank\": 1\n    }\n  ],\n  \"location\": [\n    {\n      \"location\": {\n        \"reference\": \"Location/location315\",\n        \"display\": \"Consultorio 315\"\n      }\n    }\n  ],\n  \"serviceProvider\": {\n    \"reference\": \"Organization/org12345\",\n    \"display\": \"Hospital General Central S.A.\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRACTITIONER",
+			"item": [
+				{
+					"name": "crearMedico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Practitioner\",\n  \"id\": \"practitioner12345\",\n  \"identifier\": [\n    {\n      \"use\": \"official\",\n      \"type\": {\n        \"text\": \"Documento de identidad\"\n      },\n      \"value\": \"7649328645\"\n    },\n    {\n      \"use\": \"secondary\",\n      \"type\": {\n        \"text\": \"Tarjeta Profesional de Salud\"\n      },\n      \"value\": \"7649328645\"\n    }\n  ],\n  \"active\": true,\n  \"name\": [\n    {\n      \"use\": \"official\",\n      \"text\": \"Dr. Diego Alberto Espinoza Silva MD\",\n      \"prefix\": [\"Dr.\"],\n      \"given\": [\"Diego\", \"Alberto\"],\n      \"family\": \"Espinoza Silva\",\n      \"suffix\": [\"MD\"]\n    }\n  ],\n  \"telecom\": [\n    {\n      \"system\": \"phone\",\n      \"value\": \"+5712345678\",\n      \"use\": \"mobile\"\n    },\n    {\n      \"system\": \"phone\",\n      \"value\": \"+5718765432\",\n      \"use\": \"home\"\n    },\n    {\n      \"system\": \"email\",\n      \"value\": \"dr.diego@email.com\"\n    }\n  ],\n  \"birthDate\": \"1975-01-01\",\n  \"address\": [\n    {\n      \"use\": \"home\",\n      \"text\": \"Calle 123 #45-67, Ciudad, País\"\n    }\n  ],\n  \"photo\": [\n    {\n      \"contentType\": \"image/jpeg\",\n      \"url\": \"https://example.com/path/to/photo.jpg\"\n    }\n  ],\n  \"qualification\": [\n    {\n      \"code\": {\n        \"text\": \"Medicina General\",\n        \"coding\": [\n          {\n            \"system\": \"http://example.org/specialty-codes\",\n            \"code\": \"349\"\n          }\n        ]\n      },\n      \"period\": {\n        \"start\": \"1995-01-01\",\n        \"end\": \"2023-01-01\"\n      },\n      \"issuer\": {\n        \"display\": \"Universidad X\"\n      }\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Practitioner",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Practitioner"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "crearMedico",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"resourceType\": \"Practitioner\",\n   \"id\": \"example\",\n   \"identifier\": [\n      {\n         \"use\": \"official\",\n         \"system\": \"urn:oid:1.2.840.114338.2.1.4.1\",\n         \"value\": \"987654321\"\n      },\n      {\n         \"type\": {\n            \"text\": \"Número de registro médico\"\n         },\n         \"value\": \"7649328645\"\n      }\n   ],\n   \"active\": true,\n   \"name\": [\n      {\n         \"use\": \"usual\",\n         \"prefix\": [\n            \"Dr\"\n         ],\n         \"given\": [\n            \"Diego\",\n            \"Alberto\"\n         ],\n         \"family\": \"Espinoza Silva\",\n         \"suffix\": [\n            \"MD\"\n         ]\n      }\n   ],\n   \"telecom\": [\n      {\n         \"system\": \"phone\",\n         \"value\": \"3001234567\",\n         \"use\": \"mobile\"\n      },\n      {\n         \"system\": \"phone\",\n         \"value\": \"6072888888\",\n         \"use\": \"home\"\n      },\n      {\n         \"system\": \"email\",\n         \"value\": \"medicoprueba@ipsprueba.com\"\n      }\n   ],\n   \"birthDate\": \"1980-01-01\",\n   \"address\": [\n      {\n         \"line\": [\n            \"CALLE 1 NO 23-45\"\n         ],\n         \"city\": \"Bogota\",\n         \"state\": \"Colombia\"\n      }\n   ],\n   \"photo\": [\n      {\n         \"url\": \"https://www.doctorcueva.com/wp-content/uploads/2021/12/doctorcueva-bata-sentado-sin-bg-500px-e1646644321110.png.webp\"\n      }\n   ],\n   \"qualification\": [\n      {\n         \"code\": {\n            \"text\": \"Medico General\"\n         },\n         \"period\": {\n            \"start\": \"2000-01-01\"\n         },\n         \"issuer\": {\n            \"display\": \"Universidad de los Andes\"\n         }\n      }\n   ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://hapi.fhir.org/baseR4/Practitioner",
+									"protocol": "https",
+									"host": [
+										"hapi",
+										"fhir",
+										"org"
+									],
+									"path": [
+										"baseR4",
+										"Practitioner"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Oct 2023 23:17:07 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.9.5-SNAPSHOT/7e3c42549d/2023-09-09 REST Server (FHIR Server; FHIR 4.0.1/R4)",
+									"type": "text"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1\"",
+									"type": "text"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "f7P65kYjGEt36pCR",
+									"type": "text"
+								},
+								{
+									"key": "Content-Location",
+									"value": "https://hapi.fhir.org/baseR4/Practitioner/23103245/_history/1",
+									"type": "text"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Mon, 09 Oct 2023 23:17:06 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Location",
+									"value": "https://hapi.fhir.org/baseR4/Practitioner/23103245/_history/1",
+									"type": "text"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Practitioner\",\n    \"id\": \"23103245\",\n    \"meta\": {\n        \"versionId\": \"1\",\n        \"lastUpdated\": \"2023-10-09T23:17:06.849+00:00\",\n        \"source\": \"#f7P65kYjGEt36pCR\"\n    },\n    \"identifier\": [\n        {\n            \"use\": \"official\",\n            \"system\": \"urn:oid:1.2.840.114338.2.1.4.1\",\n            \"value\": \"987654321\"\n        },\n        {\n            \"type\": {\n                \"text\": \"Número de registro médico\"\n            },\n            \"value\": \"7649328645\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"usual\",\n            \"family\": \"Espinoza Silva\",\n            \"given\": [\n                \"Diego\",\n                \"Alberto\"\n            ],\n            \"prefix\": [\n                \"Dr\"\n            ],\n            \"suffix\": [\n                \"MD\"\n            ]\n        }\n    ],\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"3001234567\",\n            \"use\": \"mobile\"\n        },\n        {\n            \"system\": \"phone\",\n            \"value\": \"6072888888\",\n            \"use\": \"home\"\n        },\n        {\n            \"system\": \"email\",\n            \"value\": \"medicoprueba@ipsprueba.com\"\n        }\n    ],\n    \"address\": [\n        {\n            \"line\": [\n                \"CALLE 1 NO 23-45\"\n            ],\n            \"city\": \"Bogota\",\n            \"state\": \"Colombia\"\n        }\n    ],\n    \"birthDate\": \"1980-01-01\",\n    \"photo\": [\n        {\n            \"url\": \"https://www.doctorcueva.com/wp-content/uploads/2021/12/doctorcueva-bata-sentado-sin-bg-500px-e1646644321110.png.webp\"\n        }\n    ],\n    \"qualification\": [\n        {\n            \"code\": {\n                \"text\": \"Medico General\"\n            },\n            \"period\": {\n                \"start\": \"2000-01-01\"\n            },\n            \"issuer\": {\n                \"display\": \"Universidad de los Andes\"\n            }\n        }\n    ]\n}"
+						},
+						{
+							"name": "obtenermedicoPorID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"resourceType\": \"Practitioner\",\n   \"id\": \"example\",\n   \"identifier\": [\n      {\n         \"use\": \"official\",\n         \"system\": \"urn:oid:1.2.840.114338.2.1.4.1\",\n         \"value\": \"987654321\"\n      },\n      {\n         \"type\": {\n            \"text\": \"Número de registro médico\"\n         },\n         \"value\": \"7649328645\"\n      }\n   ],\n   \"active\": true,\n   \"name\": [\n      {\n         \"use\": \"usual\",\n         \"prefix\": [\n            \"Dr\"\n         ],\n         \"given\": [\n            \"Diego\",\n            \"Alberto\"\n         ],\n         \"family\": \"Espinoza Silva\",\n         \"suffix\": [\n            \"MD\"\n         ]\n      }\n   ],\n   \"telecom\": [\n      {\n         \"system\": \"phone\",\n         \"value\": \"3001234567\",\n         \"use\": \"mobile\"\n      },\n      {\n         \"system\": \"phone\",\n         \"value\": \"6072888888\",\n         \"use\": \"home\"\n      },\n      {\n         \"system\": \"email\",\n         \"value\": \"medicoprueba@ipsprueba.com\"\n      }\n   ],\n   \"birthDate\": \"1980-01-01\",\n   \"address\": [\n      {\n         \"line\": [\n            \"CALLE 1 NO 23-45\"\n         ],\n         \"city\": \"Bogota\",\n         \"state\": \"Colombia\"\n      }\n   ],\n   \"photo\": [\n      {\n         \"url\": \"https://www.doctorcueva.com/wp-content/uploads/2021/12/doctorcueva-bata-sentado-sin-bg-500px-e1646644321110.png.webp\"\n      }\n   ],\n   \"qualification\": [\n      {\n         \"code\": {\n            \"text\": \"Medico General\"\n         },\n         \"period\": {\n            \"start\": \"2000-01-01\"\n         },\n         \"issuer\": {\n            \"display\": \"Universidad de los Andes\"\n         }\n      }\n   ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://hapi.fhir.org/baseR4/Practitioner/23103245",
+									"protocol": "https",
+									"host": [
+										"hapi",
+										"fhir",
+										"org"
+									],
+									"path": [
+										"baseR4",
+										"Practitioner",
+										"23103245"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "obtenerMedicoPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Practitioner/23103245",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Practitioner",
+								"23103245"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ORGANIZATION",
+			"item": [
+				{
+					"name": "crearOrganizacioPrincipal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Organization\",\n  \"id\": \"org12345\",\n  \"identifier\": [\n    {\n      \"use\": \"official\",\n      \"type\": {\n        \"text\": \"Identificación DIAN\"\n      },\n      \"value\": \"900123456-1\"\n    },\n    {\n      \"use\": \"secondary\",\n      \"type\": {\n        \"text\": \"Identificación MinSalud\"\n      },\n      \"value\": \"MSAL-00123456\"\n    }\n  ],\n  \"active\": true,\n  \"name\": \"Clinica Marly\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Organization",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crearOrganizacionHija",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Organization\",\n  \"id\": \"org12345\",\n  \"identifier\": [\n    {\n      \"use\": \"official\",\n      \"type\": {\n        \"text\": \"Identificación DIAN\"\n      },\n      \"value\": \"900123456-1\"\n    },\n    {\n      \"use\": \"secondary\",\n      \"type\": {\n        \"text\": \"Identificación MinSalud\"\n      },\n      \"value\": \"MSAL-00123456\"\n    }\n  ],\n  \"active\": true,\n  \"type\": [\n    {\n      \"coding\": [\n        {\n          \"system\": \"http://terminology.hl7.org/CodeSystem/organization-type\",\n          \"code\": \"prov\",\n          \"display\": \"Prestador de salud\"\n        }\n      ],\n      \"text\": \"Prestador de salud\"\n    }\n  ],\n  \"name\": \"Hospital General Central S.A.\",\n  \"alias\": [\"HGC Central\"],\n  \"telecom\": [\n    {\n      \"system\": \"phone\",\n      \"value\": \"+57123456789\",\n      \"use\": \"work\"\n    }\n  ],\n  \"contact\": [\n    {\n      \"purpose\": {\n        \"coding\": [\n          {\n            \"system\": \"http://terminology.hl7.org/CodeSystem/contactentity-type\",\n            \"code\": \"ADMIN\",\n            \"display\": \"Administrativo\"\n          }\n        ],\n        \"text\": \"Contacto Administrativo\"\n      },\n      \"name\": {\n        \"family\": \"Lopez\",\n        \"given\": [\"Maria\", \"Fernanda\"]\n      },\n      \"telecom\": [\n        {\n          \"system\": \"phone\",\n          \"value\": \"+5712345678\",\n          \"use\": \"work\"\n        },\n        {\n          \"system\": \"email\",\n          \"value\": \"contacto@hgc-central.com\"\n        }\n      ]\n    }\n  ],\n  \"url\": \"https://www.hgc-central.com\",\n  \"partOf\": {\n    \"reference\": \"Organization/23130650\",\n    \"display\": \"Clínica de Marly\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Organization",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Organization"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LOCATION",
+			"item": [
+				{
+					"name": "agregarLocalizacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Location\",\n  \"id\": \"location315\",\n  \"status\": \"active\",\n  \"name\": \"Consultorio 315\",\n  \"alias\": [\"Consultorio Médico General 315\"],\n  \"description\": \"Consultorio destinado para consultas de Medicina General.\",\n  \"mode\": \"instance\", // Indica que este recurso representa una instancia específica de una ubicación y no un tipo general.\n  \"type\": {\n    \"coding\": [\n      {\n        \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ServiceDeliveryLocationRoleType\",\n        \"code\": \"AMB\",\n        \"display\": \"Ambulatorio\"\n      }\n    ],\n    \"text\": \"Consultorio Ambulatorio\"\n  },\n  \"telecom\": [ // Este es un dato ficticio, se debe actualizar con información real.\n    {\n      \"system\": \"phone\",\n      \"value\": \"+5712345678\"\n    }\n  ],\n  \"address\": { // Esta dirección es ficticia y deberá ser reemplazada por la dirección real del consultorio.\n    \"use\": \"work\",\n    \"type\": \"physical\",\n    \"text\": \"Calle 123 #45-67, Ciudad, País\"\n  },\n  \"physicalType\": { // Define que la ubicación es un espacio.\n    \"coding\": [\n      {\n        \"system\": \"http://terminology.hl7.org/CodeSystem/location-physical-type\",\n        \"code\": \"ro\",\n        \"display\": \"Habitación\"\n      }\n    ]\n  },\n  \"managingOrganization\": { // La referencia a la organización \"Hospital General Central\" donde se encuentra el consultorio.\n    \"reference\": \"Organization/23132155\",\n    \"display\": \"Hospital General Central S.A.\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hapi.fhir.org/baseR4/Location",
+							"protocol": "https",
+							"host": [
+								"hapi",
+								"fhir",
+								"org"
+							],
+							"path": [
+								"baseR4",
+								"Location"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
