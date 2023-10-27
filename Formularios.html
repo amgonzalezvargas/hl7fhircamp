@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Estilos.css">
+    <title>Menú Calculadora</title>
+</head>
+<body>
+
+    <!-- Ventana de Logeo -->
+        <div class="container">
+            <div class="Login">
+                <h3 class="d-flex justify-content-center">Login Profesional</h3>
+                <label class="Id">ID: <input type="text" autocomplete="off"></label>
+                <label class="Nombre">NOMBRE: <input type="text" autocomplete="off"></label>
+                <label class="Id">REGISTRO MEDICO: <input type="text" autocomplete="off"></label> <!--Registro Medico-->
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="Ingresar">Ingresar</button>
+                </div>
+            </div>
+        </div>
+
+    <!-- Ventana de Menú principal-->
+    <div class="container MenuP">
+        <div class="Menu p-4" style="display: none;">
+            <h3 class="d-flex justify-content-center" style="padding-bottom: 6px;">Menú principal</h3>
+            <div class="Botones">
+                <button type="submit" class="Findrisk">Calculadora Findrisk</button>
+                <button type="submit" class="Framingham">Calculadora Framinham</button>
+                <button type="submit" class="IMC">Calculadora IMC</button>
+                <button type="submit" class="PA">Calculadora Perimetro Abdominal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculo Findrisk -->
+    <div class="container" style="max-width: 680px; margin:-65px auto;">
+
+        <div class="C_Findrisk" style="display: none;">
+            <h3 class="d-flex justify-content-center">Frindisk</h3>
+            <h5 class="d-flex justify-content-center">Riesgo de desarollo de diabetes</h5>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" class="form-control mb-3" placeholder="Sexo" style="width: 590px;">
+                    <input type="number" class="form-control mb-3" placeholder="Edad" style="width: 590px;">
+                    <input type="text" class="form-control mb-3" placeholder="Peso" style="width: 590px;">
+                    <input type="text" class="form-control mb-3" placeholder="Estatura" style="width: 590px;">
+                    <input type="text" class="form-control mb-3" placeholder="IMC" style="width: 590px;">
+                    <input type="text" class="form-control mb-3" placeholder="Perimetro Adominal" style="width: 590px;">
+                    <input type="text" class="form-control mb-3" placeholder="Colesterol Total" style="width: 590px;">
+                    <input type="text" class="form-control mb-3" placeholder="Colesterol HDL" style="width: 590px;">
+                    <input type="text" class="form-control mb-3" placeholder="Valor de tensión arterial" style="width: 590px;">
+                </div>
+            </div>
+
+            <div class="Contenidos_inputs d-flex align-items-center justify-content-between" style="margin-bottom: 8px;">
+                <span class="d-flex flex-grow-1">¿Realiza Ejercicio Habitualmente?</span>
+                <select class="custom-select" style="margin-right: 100px;">
+                    <option value=""></option>
+                    <option value="">Si</option>
+                    <option value="">No</option>
+                </select>
+            </div>
+
+            <div class="Contenidos_inputs d-flex align-items-center justify-content-between" style="margin-bottom: 8px;">
+                <span class="d-flex flex-grow-1">¿Usted es diabético?</span>
+                <select class="custom-select" style="margin-right: 100px;">
+                    <option value=""></option>
+                    <option value="">Si</option>
+                    <option value="">No</option>
+                </select>
+            </div>
+
+            <div class="Contenidos_inputs d-flex align-items-center justify-content-between" style="margin-bottom: 8px;">
+                <span class="d-flex flex-grow-1">¿Consume algún producto derivado del tabaco?</span>
+                <select class="custom-select" style="margin-right: 100px;">
+                    <option value=""></option>
+                    <option value="">Si</option>
+                    <option value="">No</option>
+                </select>
+            </div>
+
+            <div class="Botones_Calcular_Findrisk d-flex align-items-center justify-content-between" style="width: 100%;">
+
+                <Button type="submit" class="Retroceder_C1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                      </svg>
+                      Atrás
+                </Button>
+
+                <button type="submit" class="B_Calcular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5zm0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
+                      </svg>
+                    Calcular
+                </button>
+            </div>
+        </div>
+        <!-- Final de la primera calculadora -->
+
+        <!-- Incio segunda calculadora Framingham -->
+        <div class="container" style="max-width: 680px; margin:-65px auto;">
+
+            <div class="C_Framingham" style="display: none;">
+                <h3 class="d-flex justify-content-center" style="margin-bottom: 0rem;">Framingham</h3>
+
+                <h5 class="m-3">Factores de Riesgo (requeridos)</h5>
+                <div class="d-flex justify-content-center row m-3">
+                    <div class="col-md-3">
+                        <span class="d-flex flex-grow-1">Sexo: </span>
+                        <select class="custom-select" style="width: 100px;" required="required">
+                            <option value=""></option>
+                            <option value="">Hombre</option>
+                            <option value="">Mujer</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <span class="d-flex flex-grow-1">Diabetes: </span>
+                        <select class="custom-select" style="width: 100px;" required="required">
+                            <option value=""></option>
+                            <option value="">Si</option>
+                            <option value="">No</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <span class="d-flex flex-grow-1">Fuma</span>
+                        <select class="custom-select" style="width: 100px;" required="required">
+                            <option value=""></option>
+                            <option value="">Si</option>
+                            <option value="">No</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+                <h5 class="m-3">Presión/tensión arterial (Solo en mm de Hg)</h5>
+                <div class="d-flex justify-content-center row m-3">
+                    <input type="number" class="mb-4" placeholder="Sistólica o máxima " required="required">
+                    <input type="number" placeholder="Diastólica o mínima " required="required">
+
+                </div>
+
+                <h5 class="m-3">Perfil Lipidos (Solo en mg/dl)</h5>
+                <div class="d-flex m-3">
+                    <h5>HDL = Liproteínas de alta densidad</h5>
+                    <h5>LDL = Liproteínas de baja densidad</h5>
+                </div>
+                <div class="d-flex row m-3">
+                    <input type="number" class="mb-4" placeholder="Colesterol total" required="required">
+                    <input type="number" class="mb-4" placeholder="Colesterol HDL" required="required">
+                    <input type="number" class="mb-4" placeholder="Triglicéridos" required="required">
+                    <input type="number" class="mb-4" placeholder="Colesterol LDL" required="required">
+                </div>
+    
+                <div class="Botones_Calcular_Findrisk d-flex align-items-center justify-content-between" style="width: 100%;">
+    
+                    <Button type="submit" class="Retroceder_C2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                          </svg>
+                          Atrás
+                    </Button>
+    
+                    <button type="submit" class="B_Calcular">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5zm0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
+                          </svg>
+                        Calcular
+                    </button>
+                </div>
+            </div>
+        <!-- Final Calculadora Framingham -->
+
+        <!-- Inicio Calculadora IMC -->
+        <div class="container">
+            <div class="C_IMC" style="display: none;">
+                <h3 class="d-flex justify-content-center" style="margin-bottom: 0rem;">IMC</h3>
+
+                <!-- <h5 class="m-3">Presión/tensión arterial (Solo en mm de Hg)</h5> -->
+                <div class="d-flex justify-content-center row m-3">
+                    <input type="text" class="mb-4" placeholder="Estatura (M)" required="required">
+                    <input type="text" placeholder="Peso (KG)" required="required">
+                </div>
+                <div class="Botones_Calcular_Findrisk d-flex align-items-center justify-content-between" style="width: 100%;">
+    
+                    <Button type="submit" class="Retroceder_C3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                          </svg>
+                          Retroceder
+                    </Button>
+    
+                    <button type="submit" class="B_Calcular">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5zm0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
+                          </svg>
+                          Calcular
+                    </button>
+                </div>
+        </div>
+        <!-- Final Calculadora IMC -->
+
+        <!-- Incio de Calculadora de Perimetro abdominal -->
+        <div class="container">
+            <div class="C_PA" style="display: none;">
+                <h3 class="d-flex justify-content-center" style="margin-bottom: 0rem;">Perimetro Abdominal</h3>
+
+                <div class="d-flex justify-content-center row m-3">
+                    <input type="text" class="mb-4" placeholder="Cintura (CM)" required="required">
+                </div>
+                <div class="d-flex align-items-center justify-content-between" style="width: 100%;">
+    
+                    <Button type="submit" class="Retroceder_C4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                          </svg>
+                          Retroceder
+                    </Button>
+    
+                    <button type="submit" class="B_Calcular">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5zm0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
+                          </svg>
+                          Calcular
+                    </button>
+                </div>
+        </div>
+        <!-- Final Calculadora Perimetro abdominal -->
+
+        <!-- Pantalla de mensaje de calculo realizado -->
+        <div class="container">
+            <div class="Mostrar" style="display: none;">
+                <div class="Mensaje_F d-flex justify-content-center row m-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" style="fill: green;">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                      </svg>
+                </div>
+                <h2 class="d-flex justify-content-center" style="margin-bottom: 0rem; color: green;">Calculo exitoso</h2>
+                <div class="d-flex justify-content-center row m-3" style="border: 1px solid #ccc; border-radius: 6px;">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, neque eveniet aspernatur, error nesciunt excepturi accusamus officiis.</p>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between" style="width: 100%;">
+    
+                    <Button type="submit" class="Retroceder_M">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                          </svg>
+                          Volver al Menú
+                    </Button>
+                </div>
+            </div>
+        </div>
+        <!-- Final de mensaje -->
+
+    </div>
+    <!-- Final  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".Ingresar").click(function(){
+                $(".Login").hide();
+                $(".Menu").show();
+            });
+
+            $(".Findrisk").click(function(){
+                $(".Menu").hide();
+                $(".C_Findrisk").show();
+            });
+
+            $(".Framingham").click(function(){
+                $(".Menu").hide();
+                $(".C_Framingham").show();
+            });
+
+            $(".IMC").click(function(){
+                $(".Menu").hide();
+                $(".C_IMC").show();
+            });
+
+            $(".PA").click(function(){
+                $(".Menu").hide();
+                $(".C_PA").show();
+            })
+            
+            ///////////////////////////Función de los botones para retroceder al menú//////////////////////////////////
+
+            //Retroceder con el boton de la calculadora Findrisk
+            $(".Retroceder_C1").click(function(){
+                $(".C_Findrisk").hide();
+                $(".Menu").show();
+            });
+
+            //Retroceder con el boton de la calculadora Framingham
+            $(".Retroceder_C2").click(function(){
+                $(".C_Framingham").hide();
+                $(".Menu").show();
+            })
+
+            //Retroceder con el boton de la Calculadora IMC
+            $(".Retroceder_C3").click(function(){
+                $(".C_IMC").hide();
+                $(".Menu").show();
+            })
+
+            //Retroceder con el boton de la Calculadora PA
+            $(".Retroceder_C4").click(function(){
+                $(".C_PA").hide();
+                $(".Menu").show();
+            })
+
+            ///////////////////////////Funciones de los botones para calcular//////////////////////////////////////
+            
+            //Mensaje / Calculadora Findrisk
+
+            $(".B_Calcular").click(function(){
+                $(".C_Findrisk").hide();
+                $(".Mostrar").show();
+            })
+
+            //Mensaje / Calculadora Framingham
+            $(".B_Calcular").click(function(){
+                $(".C_Framingham").hide();
+                $(".Mostrar").show();
+            })
+
+            //Mensaje / Calculadora IMC
+            $(".B_Calcular").click(function(){
+                $(".C_IMC").hide();
+                $(".Mostrar").show();
+            })
+
+            // Mensaje / Calculadora PA
+            $(".B_Calcular").click(function(){
+                $(".C_PA").hide();
+                $(".Mostrar").show();
+            })
+            /////////////////////////// Función para el boton de volver al menú principal ///////////////////////////
+            $(".Retroceder_M").click(function(){
+                $(".Mostrar").hide();
+                $(".Menu").show();
+            })
+        });
+    </script>
+</body>
+</html>

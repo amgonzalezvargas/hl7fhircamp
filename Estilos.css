@@ -1,0 +1,93 @@
+
+/* Primera ventana */
+.container {
+    max-width: 380px;
+    max-height: 0px;
+    margin: 100px auto;
+}
+  
+.Login {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+  
+.Login label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+  
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #c5bcbc;
+    border-radius: 0.25rem;
+}
+  
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+/* Segunda ventana */
+
+.container .MenuP{
+    margin: -20px auto; 
+    padding: 20px auto;
+    max-width: 400px;
+    max-height: 500px;
+}
+
+.Menu {
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+} 
+
+button{
+    display: block;
+    width: 100%;
+    height: 40%;
+    margin-bottom: 12px;
+}
+
+/* Primer Calculo */
+  
+.C_Findrisk {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Segundo Calculo */
+
+.C_Framingham{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Calculadora IMC */
+
+.C_IMC{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.Mostrar{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Calculadora PA */
+.C_PA{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
