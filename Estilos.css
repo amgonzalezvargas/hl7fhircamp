@@ -12,7 +12,7 @@
     border-radius: 0.25rem;
 }
   
-.Login label {
+label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
