@@ -161,8 +161,7 @@
                     style="margin-top: 10px;;">Calcular</button>
             </div>
             <div class="Botones" style="margin-top: 30px;;">
-                <button class="btn-success" type="submit" class="btnVerRiesgoDelPaciente">Ver Riesgos del
-                    Paciente</button>
+                <button class="btn-success" type="submit" id="btnVerRiesgoDelPaciente">Ver Riesgos Evaluados</button>
                 <button class="btn-success" type="submit" id="btnEvaluarOtroPaciente">Evaluar Otro Paciente</button>
             </div>
         </div>
@@ -207,9 +206,21 @@
             <button class="btn-success" type="submit" id="btnVolverMenuPacienteDesdeResultados">Nuevo Paciente</button>
         </div>
     </div>
-    <!-- Final de mensaje -->
 
-    <!-- Final  -->
+
+    <div class="container" id="containerEvaluacionFindRisk" style="display: none;">
+        <div class="Mensaje_F d-flex justify-content-center row m-3">
+            <i class="fa-regular fa-circle-check" style="font-size: 5em;color: green;text-align: center;"></i>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between" style="width: 100%;">
+            <button class="btn-success" type="submit" id="btnVolverMenuDesdeResultadosFindRisk">Volver al Menú</button>
+        </div>
+        <div class="d-flex align-items-center justify-content-between" style="width: 100%;">
+            <button class="btn-success" type="submit" id="btnVolverMenuPacienteDesdeResultadosFindRisk">Nuevo
+                Paciente</button>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -221,6 +232,7 @@
     <script src="jsRiesgoPerimetroAbdominal.js"></script>
     <script src="jsRiesgoFinrisk.js"></script>
     <script src="jsRiesgoFramingham.js"></script>
+    <script src="jsFHIRFindRisk.js"></script>
     <script>
         $(document).ready(function () {
             $("#btnRegistroProfesional").click(function () {
@@ -235,9 +247,15 @@
                 buscarPacienteFHIR();
             });
 
-            $("#btnEvaluarOtroPaciente, #btnVolverMenuPacienteDesdeResultados").click(function () {
+            $("#btnEvaluarOtroPaciente, #btnVolverMenuPacienteDesdeResultados, #btnVolverMenuPacienteDesdeResultadosFindRisk").click(function () {
                 $(".container").hide();
                 $("#containerPaciente").show();
+            });
+
+
+            $("#btnVolverMenu, #btnVolverMenuDesdeResultadosFindRisk").click(function () {
+                $("#containerResultados").hide();
+                $("#containerFormulario").show();
             });
 
 
@@ -291,6 +309,9 @@
                 calcularRiesgoFinrisk();
                 calcularRiesgoFramingham();
                 /*
+                aca va el texto para enviar los datos a FHIR
+                */
+                /*
                 presentacion del fomulario
                 */
                 $("#containerFormulario").hide();
@@ -298,10 +319,7 @@
             })
 
 
-            $("#btnVolverMenu").click(function () {
-                $("#containerResultados").hide();
-                $("#containerFormulario").show();
-            });
+
 
 
 
